@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Glass Orchestra</title>
+	<link href="https://fonts.googleapis.com/css?family=Francois+One|Rajdhani&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		#go {background-color:#ff8000;}
+
+		#tt {font-family: 'Francois One', sans-serif; font-size:18px;margin-top: 30px; margin-left: 30px; color:#000;}
+
+		#mt {font-family: 'Rajdhani', sans-serif; font-size: 15px; margin-left:30px; color:#000;}
+
+		.a {height: 150px; position: absolute; margin-top:360px; margin-left:200px; opacity: 0.2; transition: all 2s;}
+		.a:hover{opacity: 1}
+
+		.b {height: 150px; position: absolute; margin-top:160px; margin-left:400px; opacity: 0.2; transition: all 2s;}
+		.b:hover{opacity: 1}
+
+		.fg {height: 100px; position: absolute; margin-top: 550px; margin-left: 30px;}
+
+		.clap {height: 100px; position: absolute; margin-top: 10px; margin-left: 1080px;}		
+
+		.c {height: 175px; position: absolute; margin-top:345px; margin-left:600px; opacity: 0.2; transition: all 2s;}
+		.c:hover{opacity: 1}
+
+		.d {height: 180px; position: absolute; margin-top:145px; margin-left:740px; opacity: 0.2; transition: all 2s;}
+		.d:hover{opacity: 1}
+
+		.e {height: 150px; position: absolute; margin-top:360px; margin-left:1000px; opacity: 0.2; transition: all 2s;}
+		.e:hover{opacity: 1}
+
+
+	</style>
+</head>
+<body id="go">
+	<h3 id="tt">Beethoven "Symphony No 5" Karajan</h3>
+	<p id="mt">This is an orchestra sound using wine glasses.</p>
+	<img src="wg1.png" class="a" id="s1">
+	<audio src="wc1.wav" loop id="s1s"></audio>
+
+	<img src="wg2.png" class="b" id="s2">
+	<audio src="wc2.wav" loop id="s2s"></audio>
+
+	<img src="fgg.gif" class="fg" id="sf">
+	<audio src="finger.mp3" loop id="sfs"></audio>
+
+	<img src="ca.gif" class="clap" id="cl">
+	<audio src="clap.wav" id="cls"></audio>
+
+	<img src="wg3.png" class="c" id="s3">
+	<audio src="btv.mp4" loop id="s3s"></audio>
+
+	<img src="wg4.png" class="d" id="s4">
+	<audio src="wc4.wav" loop id="s4s"></audio>
+
+	<img src="wg5.png" class="e" id="s5">
+	<audio src="wc5.wav" loop id="s5s"></audio>	
+
+	<script type="text/javascript">
+		var s1d = "off"
+		s1.onclick = function(){
+			if(s1d == "off"){
+				s1.style.opacity = "1";
+				document.body.style.background = "url(os.gif)"
+				document.body.style.backgroundSize = "cover";
+				s1s.play();
+				s1d = "on";
+			}else{
+				s1.style.opacity = "0.3";
+				s1s.pause();
+				s1d = "off";
+			}
+		}
+
+		var s2d = "off"
+		s2.onclick = function(){
+			if(s2d == "off"){
+				s2.style.opacity = "1";
+				document.body.style.background = "url(ips.gif)"
+				document.body.style.backgroundSize = "cover";
+				s2s.play();
+				s2d = "on";
+			}else{
+				s2.style.opacity = "0.3";
+				s2s.pause();
+				s2d = "off";
+			}
+		}
+
+		var sfd = "off"
+		sf.onclick = function(){
+			if(sfd == "off"){
+				sfs.volume = 0.1;
+				sfs.play();
+				sfd = "on";
+			}else{
+				sfs.pause();
+				sfd = "off";
+			}
+		}		
+
+		var cas = "off"
+		cl.onclick = function(){
+			if(cas == "off"){
+				document.body.style.background = "url(clap.gif)"
+				document.body.style.backgroundSize = "1450px auto";
+				cls.volume = 0.6;
+				cls.play();
+				cas = "on";
+			}else{
+				cls.pause();
+				cas = "off";
+			}
+		}		
+
+		var s3d = "off"
+		s3.onclick = function(){
+			if(s3d == "off"){
+				s3.style.opacity = "1";
+				document.body.style.background = "url(btv.gif)"
+				document.body.style.backgroundSize = "cover";
+				s3s.play();
+				s3d = "on";
+			}else{
+				s3.style.opacity = "0.3";
+				s3s.pause();
+				s3d = "off";
+			}
+		}
+
+		var s4d = "off"
+		s4.onclick = function(){
+			if(s4d == "off"){
+				s4.style.opacity = "1";
+				document.body.style.background = "url(wave.gif)"
+				document.body.style.backgroundSize = "cover";
+				s4s.play();
+				s4d = "on";
+			}else{
+				s4.style.opacity = "0.3";
+				s4s.pause();
+				s4d = "off";
+			}
+		}
+
+		var s5d = "off"
+		s5.onclick = function(){
+			if(s5d == "off"){
+				s5.style.opacity = "1";
+				document.body.style.background = "url(end.gif)"
+				document.body.style.backgroundSize = "cover";
+				s5s.play();
+				s5d = "on";
+			}else{
+				s5.style.opacity = "0.3";
+				s5s.pause();
+				s5d = "off";
+			}
+		}			
+ 	</script>
+
+</body>
+</html>
